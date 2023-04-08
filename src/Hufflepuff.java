@@ -33,4 +33,14 @@ public class Hufflepuff extends Hogwarts {
     public void setHonesty(int honesty) {
         this.honesty = honesty;
     }
+
+    public String printHufflepuff() {
+        return "Имя: " + getFullName()
+                + ", факультет: " + getFaculty()
+                + ", мощность колдовства: " + getPowerSorcery()
+                + ", расстояние трансгрессии: " + getDistanceTransgression()
+                + ", трудолюбие: " + getIndustriousness()
+                + ", верность: " + getLoyalty()
+                + ", честность: " + getHonesty();
+    }
 }

@@ -26,52 +26,25 @@ public class Main {
     };
 
     for (Gryffindor gryffindors : gryffindor) {
-        System.out.println("Имя: " + gryffindors.getFullName()
-                + ", факультет: " + gryffindors.getFaculty()
-                + ", мощность колдовства: " + gryffindors.getPowerSorcery()
-                + ", расстояние трансгрессии: " + gryffindors.getDistanceTransgression()
-                + ", благородство: " + gryffindors.getNobility()
-                + ", честь: " + gryffindors.getHonor()
-                + ", храбрость: " + gryffindors.getCourage());
+        System.out.println(gryffindors.printGryffindor());
     }
 
-        System.out.println();
+    System.out.println();
 
     for (Hufflepuff hufflepuffs : hufflepuff) {
-        System.out.println("Имя: " + hufflepuffs.getFullName()
-                + ", факультет: " + hufflepuffs.getFaculty()
-                + ", мощность колдовства: " + hufflepuffs.getPowerSorcery()
-                + ", расстояние трансгрессии: " + hufflepuffs.getDistanceTransgression()
-                + ", трудолюбие: " + hufflepuffs.getIndustriousness()
-                + ", верность: " + hufflepuffs.getLoyalty()
-                + ", честность: " + hufflepuffs.getHonesty());
+        System.out.println(hufflepuffs.printHufflepuff());
     }
 
-        System.out.println();
+    System.out.println();
 
     for (Ravenclaw ravenclaws : ravenclaw) {
-        System.out.println("Имя: " + ravenclaws.getFullName()
-                + ", факультет: " + ravenclaws.getFaculty()
-                + ", мощность колдовства: " + ravenclaws.getPowerSorcery()
-                + ", расстояние трансгрессии: " + ravenclaws.getDistanceTransgression()
-                + ", ум: " + ravenclaws.getMind()
-                + ", мудрость: " + ravenclaws.getWisdom()
-                + ", остроумие: " + ravenclaws.getWisdom()
-                + ", творчество: " + ravenclaws.getCreativity());
+        System.out.println(ravenclaws.printRavenclaw());
     }
 
-        System.out.println();
+    System.out.println();
 
     for (Slytherin slytherins : slytherin) {
-        System.out.println("Имя: " + slytherins.getFullName()
-                + ", факультет: " + slytherins.getFaculty()
-                + ", мощность колдовства: " + slytherins.getPowerSorcery()
-                + ", расстояние трансгрессии: " + slytherins.getDistanceTransgression()
-                + ", хитрость: " + slytherins.getCunning()
-                + ", решительность: " + slytherins.getDetermination()
-                + ", амбициозность: " + slytherins.getAmbition()
-                + ", находчивость: " + slytherins.getResourcefulness()
-                + ", жажда власти: " + slytherins.getLustForPower());
+        System.out.println(slytherins.printSlytherin());
     }
     }
 }

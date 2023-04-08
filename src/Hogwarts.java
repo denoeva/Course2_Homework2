@@ -1,4 +1,4 @@
-public class Hogwarts {
+public abstract class Hogwarts {
     private String fullName;
     private String faculty;
     private int powerSorcery;
@@ -15,16 +15,8 @@ public class Hogwarts {
         return fullName;
     }
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
-    }
-
     public String getFaculty() {
         return faculty;
-    }
-
-    public void setFaculty(String faculty) {
-        this.faculty = faculty;
     }
 
     public int getPowerSorcery() {

@@ -53,4 +53,16 @@ public class Slytherin extends Hogwarts {
     public void setLustForPower(int lustForPower) {
         this.lustForPower = lustForPower;
     }
+
+    public String printSlytherin() {
+        return "Имя: " + getFullName()
+                + ", факультет: " + getFaculty()
+                + ", мощность колдовства: " + getPowerSorcery()
+                + ", расстояние трансгрессии: " + getDistanceTransgression()
+                + ", хитрость: " + getCunning()
+                + ", решительность: " + getDetermination()
+                + ", амбициозность: " + getAmbition()
+                + ", находчивость: " + getResourcefulness()
+                + ", жажда власти: " + getLustForPower();
+    }
 }
