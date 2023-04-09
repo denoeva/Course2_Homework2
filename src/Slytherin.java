@@ -18,10 +18,6 @@ public class Slytherin extends Hogwarts {
         return cunning;
     }
 
-    public void setCunning(int cunning) {
-        this.cunning = cunning;
-    }
-
     public int getDetermination() {
         return determination;
     }
@@ -52,5 +48,29 @@ public class Slytherin extends Hogwarts {
 
     public void setLustForPower(int lustForPower) {
         this.lustForPower = lustForPower;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString()
+                + ", хитрость - " + getCunning()
+                + ", решительность - " + getDetermination()
+                + ", амбициозность - " + getAmbition()
+                + ", находчивость - " + getResourcefulness()
+                + ", жажда власти - " + getLustForPower();
+    }
+
+    private int getSlytherinTotalPower() {
+        return cunning + determination + ambition + resourcefulness + lustForPower;
+    }
+
+    public void compareTwoSlytherinStudents(Slytherin other) {
+        if (other.getSlytherinTotalPower() < this.getSlytherinTotalPower()) {
+            System.out.println("Ученик " + this.getFullName() + " сильнее, чем ученик " + other.getFullName());
+        } else if (other.getSlytherinTotalPower() > this.getSlytherinTotalPower()) {
+            System.out.println("Ученик " + other.getFullName() + " сильнее, чем ученик " + this.getFullName());
+        } else {
+            System.out.println("Ученики имеют равную силу");
+        }
     }
 }
