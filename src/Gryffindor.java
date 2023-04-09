@@ -35,13 +35,25 @@ public class Gryffindor extends Hogwarts {
         this.courage = courage;
     }
 
-    public String printGryffindor() {
-        return "Имя: " + getFullName()
-                + ", факультет: " + getFaculty()
-                + ", мощность колдовства: " + getPowerSorcery()
-                + ", расстояние трансгрессии: " + getDistanceTransgression()
-                + ", благородство: " + getNobility()
-                + ", честь: " + getHonor()
-                + ", храбрость: " + getCourage();
+    @Override
+    public String toString() {
+        return super.toString()
+                + ", благородство - " + getNobility()
+                + ", честь - " + getHonor()
+                + ", храбрость - " + getCourage();
+    }
+
+    private int getGryffindorTotalPower() {
+        return nobility + honor + courage;
+    }
+
+    public void compareTwoGryffindorStudents(Gryffindor other) {
+        if (other.getGryffindorTotalPower() < this.getGryffindorTotalPower()) {
+            System.out.println("Ученик " + this.getFullName() + " сильнее, чем ученик " + other.getFullName());
+        } else if (other.getGryffindorTotalPower() > this.getGryffindorTotalPower()) {
+            System.out.println("Ученик " + other.getFullName() + " сильнее, чем ученик " + this.getFullName());
+        } else {
+            System.out.println("Ученики имеют равную силу");
+        }
     }
 }

@@ -34,13 +34,25 @@ public class Hufflepuff extends Hogwarts {
         this.honesty = honesty;
     }
 
-    public String printHufflepuff() {
-        return "Имя: " + getFullName()
-                + ", факультет: " + getFaculty()
-                + ", мощность колдовства: " + getPowerSorcery()
-                + ", расстояние трансгрессии: " + getDistanceTransgression()
-                + ", трудолюбие: " + getIndustriousness()
-                + ", верность: " + getLoyalty()
-                + ", честность: " + getHonesty();
+    @Override
+    public String toString() {
+        return super.toString()
+                + ", трудолюбие - " + getIndustriousness()
+                + ", верность - " + getLoyalty()
+                + ", честность - " + getHonesty();
+    }
+
+    private int getHufflepuffTotalPower() {
+        return industriousness + loyalty + honesty;
+    }
+
+    public void compareTwoHufflepuffStudents(Hufflepuff other) {
+        if (other.getHufflepuffTotalPower() < this.getHufflepuffTotalPower()) {
+            System.out.println("Ученик " + this.getFullName() + " сильнее, чем ученик " + other.getFullName());
+        } else if (other.getHufflepuffTotalPower() > this.getHufflepuffTotalPower()) {
+            System.out.println("Ученик " + other.getFullName() + " сильнее, чем ученик " + this.getFullName());
+        } else {
+            System.out.println("Ученики имеют равную силу");
+        }
     }
 }
